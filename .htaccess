@@ -1,0 +1,55 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+    
+
+    RewriteRule ^index$ index.php
+    RewriteRule ^logout$ index.php?page=logout
+    RewriteRule ^dashboard$ index.php?page=dashboard
+    RewriteRule ^settings$ index.php?page=settings
+
+    RewriteRule ^payments$ index.php?page=payments
+    RewriteRule ^payments/(.*)$ index.php?page=payments&current_page=$1
+    RewriteRule ^payments/(.*)/(.*)$ index.php?page=payments&current_page=$1&notif=$2
+      
+    RewriteRule ^reports$ index.php?page=reports
+    RewriteRule ^reports/r/(.*)$ index.php?page=reports&remove_report=$1 
+    RewriteRule ^reports/view/(.*)/(.*)$ index.php?page=report_view&report_id=$1&notif=$2
+    RewriteRule ^reports/view/(.*)$ index.php?page=report_view&report_id=$1
+    RewriteRule ^reports/(.*)$ index.php?page=reports&current_page=$1
+    
+    RewriteRule ^clients$ index.php?page=clients
+    RewriteRule ^client/(.*)$ index.php?page=client_view&client_id=$1
+    RewriteRule ^clients/add$ index.php?page=client_add
+    RewriteRule ^clients/edit$ index.php?page=client_edit
+    RewriteRule ^clients/r/(.*)$ index.php?page=clients&remove_client=$1
+    RewriteRule ^clients/(.*)$ index.php?page=clients&current_page=$1
+
+    RewriteRule ^products$ index.php?page=products
+    RewriteRule ^products/add$ index.php?page=product_add
+    RewriteRule ^products/r/(.*)$ index.php?page=products&remove_product=$1 
+    RewriteRule ^products/edit/(.*)$ index.php?page=product_edit&product_id=$1
+    RewriteRule ^products/(.*)$ index.php?page=products&current_page=$1
+
+    RewriteRule ^invoices$ index.php?page=invoices
+    RewriteRule ^invoices/add$ index.php?page=invoice_create
+    RewriteRule ^invoices/report/(.*)$ index.php?page=invoice_report&invoice_id=$1
+    RewriteRule ^invoices/edit/(.*)$ index.php?page=invoice_edit&invoice_id=$1
+    RewriteRule ^invoices/view/pdf/(.*)$ index.php?page=invoice_pdf&invoice_id=$1 [QSA]
+    RewriteRule ^invoices/view/(.*)/(.*)$ index.php?page=invoice_view&invoice_id=$1&notif=$2
+    RewriteRule ^invoices/view/(.*)$ index.php?page=invoice_view&invoice_id=$1   
+    RewriteRule ^invoices/(.*)$ index.php?page=invoices&current_page=$1
+
+    RewriteRule ^prodcalc/(.*)/(.*)/(.*)$ template/core/processes/Products/calculate.php?qty=$1&price=$2&discount=$3
+    RewriteRule ^prodtotal/(.*)/(.*)$ template/core/processes/Products/display.php?qty=$1&price=$2 [QSA]
+    RewriteRule ^submitproduct$ template/core/processes/addproducts.php [QSA]
+    RewriteRule ^editproduct$ template/core/processes/editproducts.php [QSA]
+    RewriteRule ^subtotal/(.*)$ template/core/processes/Products/subtotal.php?total=$1 [QSA]
+    RewriteRule ^prodprice/(.*)$ template/core/processes/Products/price.php?product=$1 [QSA]
+    RewriteRule ^discount/(.*)$ template/core/processes/Products/discount.php?discount=$1 [QSA]
+    RewriteRule ^produnit/(.*)$ template/core/processes/Products/unit.php?product=$1 [QSA]
+   
+    
+</IfModule>

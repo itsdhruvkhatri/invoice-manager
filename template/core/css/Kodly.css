@@ -1,0 +1,334 @@
+/* 
+    Created on : 03 Dec 2019, 13:25:44
+    Author     : Kodly
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+html, body, main{
+    font-family: 'Poppins', sans-serif;
+    height:100%;
+    padding: 0;
+    margin: 0;  
+}
+
+body{
+    position: relative;
+}
+
+h4{
+    text-transform: uppercase;  
+}
+
+footer{
+    padding: 10px;
+    bottom: 0;
+    height: 50px;
+    position: fixed;
+}
+
+footer a{
+    color: darkblue;
+}
+
+footer a:hover{
+    color: gray;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    border-bottom: whitesmoke 1px solid;
+    box-shadow: lightgray 2px 2px !important;
+}
+
+/*Loading gif*/
+#loading{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("../../images/loading.gif") no-repeat center center rgba(0,0,0,0.25);
+}
+
+.popOver + .tooltip > .tooltip-arrow {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #eebf3f;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.float-right{
+    float: right;
+}
+
+.light-nav{
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    color: black;
+}
+
+.light-nav button:hover{
+    background: gray;
+    color: white;
+}
+
+.grey-nav{
+    background: whitesmoke;
+    border-left: 1px solid lightgray;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+.gray-nav{
+    background: whitesmoke;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+.btn-secondary{
+    background: gray !important;
+}
+
+.send{
+    background: limegreen;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.send .btn{
+    color: white;
+}
+
+.send a{
+    color: white;
+    text-decoration: none;
+}
+
+.send a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.top-nav{
+    padding: 2px;
+    background-color: whitesmoke !important;
+    float:top;
+}
+
+.top-nav button{   
+    padding: 5px;
+    color: black;
+}
+
+.top-nav button:hover{
+    text-decoration: none;
+    color: white;
+    background: gray;
+}
+
+.top-nav ul li{
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.icons{
+    text-align: left;   
+}
+
+.frontpng{
+    background: url("../../images/home.jpg") no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.text-warning{
+    color: goldenrod !important;
+}
+
+.text-danger{
+    color: maroon !important;
+}
+
+.text-secondary{
+    color: gray !important;
+}
+
+.text-success{
+    color: limegreen !important;
+}
+
+.dropdown-menu a{
+    padding-bottom: 10px;
+}
+
+.dropdown-menu a:hover{
+    color: white;
+    background: gray;
+}
+
+.k-badge-secondary{
+    color: lightslategray;
+    border: 2px solid;
+}
+
+.k-badge-danger{
+    color: maroon;
+    border: 2px solid;
+}
+
+.k-badge-info{
+    color: red;
+    border: 2px solid;
+}
+
+.k-badge-success{
+    color: limegreen;
+    border: 2px solid;
+}
+
+.k-badge-warning{
+    color: goldenrod;
+    border: 2px solid;
+}
+
+.table-text-heading{
+    color: lightslategray;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.panel-gray{
+    color: lightslategray;
+}
+
+.button-warning{
+    background: goldenrod;
+    padding: 10px;
+}
+
+.button-warning .btn{
+    color: white;
+}
+
+.button-gray{
+    background: lightslategray;
+    padding: 10px;
+}
+
+.button-gray a{
+    color: white;
+}
+
+.button-gray a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: whitesmoke;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active{
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: gray;
+}
+
+#sidebar .sidebar-header a{
+    color: white;
+    margin-left: -15px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;   
+}
+
+#sidebar ul p {
+    color: gray;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: gray;
+    background: #fff;
+}
+#sidebar ul li a:hover {
+    color: white;
+    background: gray;
+    text-decoration: none;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: white;
+    background: gray;
+}
+
+#sidebar ul li ul li{
+    text-align: center;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.mobile-only{
+    display: none !important;
+}
+
+@media (max-width: 1024px){
+    .mobile-only{
+        display: block !important;
+    }
+    .desktop-only{
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
